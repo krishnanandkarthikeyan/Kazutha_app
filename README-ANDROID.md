@@ -28,3 +28,11 @@ Open this directory as an Android project, let Gradle sync, and use **Build → 
 ## Important server note
 
 The Android app contains the frontend, but multiplayer remains server-authoritative on Render. The Render deployment must therefore be running the production `server.mjs`/`dist` package.
+
+## 1.0.1 phone fit-screen fix
+
+This revision fixes the landscape-phone cropping issue. The app now treats the
+original Kazhutha interface as one logical game viewport and uniformly scales
+that entire viewport to fit both the phone width and phone height. Normal page
+scrolling is still disabled; the top bar, table/player scene, hand/cards and
+bottom controls are intended to remain visible inside the screen together.
